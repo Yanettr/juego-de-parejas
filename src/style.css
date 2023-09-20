@@ -2,5 +2,136 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: rgb(222, 222, 233)
+}
+
+header, main, footer {
+    padding: 20px;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+}
+
+nav img {
+    max-height: 50px;
+    margin-left: 10px;
+}
+
+main {
+    height:400px;
+    width:400px;
+    background-color: aliceblue;
+    border-radius: 15px;
+    padding:5px;
+    margin: 38px 0px 0px 329px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    max-width: 800px;
+}
+
+.card {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    padding: 21px;
+}
+
+.card .view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card .front-view {
+    background-color: #f0f0f0;
+}
+
+.card .back-view {
+    display: none;
+}
+
+.card.flipped .front-view {
+    display: none;
+}
+
+.card.flipped .back-view {
+    display: flex;
+}
+
+.card .material-icons {
+    font-size: 48px;
+}
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.card .view img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.card .view img {
+    object-fit: cover; 
+}
+
+footer {
+    background-color: #f8f8f8; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+footer p {
+    margin: 0; 
+    font-size: 14px;
+    color: #333;
+}
+/* Medios CSS */
+
+/* Medios CSS */
+
+@media (max-width: 768px) {
+    main {
+        width: 300px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        width: 200px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
