@@ -96,44 +96,34 @@ footer {
 .card .view img {
     max-width: 100%;
     max-height: 100%;
-}
-.card .view img {
     object-fit: cover; 
-}
-
-.card .back-view{
-    transform:rotate(-180deg);
-}
-
-.card:vuelta .back-view{
-    transform:rotateY(0);
-}
-
-.card:vuelta .front-view{
-    transform:rotateY(180deg);
 }
 
 .card .back-view img{
     max-width:45px;
 }
+
 .card .moverse{
-    animation: shake 0.35 ease-in-out
+    animation: shake 0.35 ease-in-out;
 }
 
 @keyframes moverse {
     0%,100%{
-    transform:translateX(0);
-}20%{
-    transform:translateX(-13px);
-}40%{
-    transform:translateX(13px);
-}60%{
-    transform:translateX(-8px);
-}80%{
-    transform:translateX(8px);
+        transform:translateX(0);
+    }
+    20%{
+        transform:translateX(-13px);
+    }
+    40%{
+        transform:translateX(13px);
+    }
+    60%{
+        transform:translateX(-8px);
+    }
+    80%{
+        transform:translateX(8px);
+    }
 }
-}
-
 
 footer {
     background-color: #f8f8f8; 
@@ -146,7 +136,6 @@ footer p {
     font-size: 14px;
     color: #333;
 }
-/* Medios CSS */
 
 /* Medios CSS */
 

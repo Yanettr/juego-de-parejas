@@ -27,6 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Restablece las variables tar_1 y tar_2
                     tar_1 = null;
                     tar_2 = null;
+
+                    // Mueve las imágenes a la parte inferior de la pantalla
+                    tar_1.style.bottom = '-100px';
+                    tar_2.style.bottom = '-100px';
                 } else {
                     // Si las cartas no son iguales, voltéalas de nuevo
                     tar_1.classList.remove('flipped');
