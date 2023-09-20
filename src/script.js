@@ -11,12 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Guarda la carta en la variable tar_1 o tar_2, dependiendo de si está volteada
             if (this === tar_1) {
-                tar_1 = null;
+                return;
             } else if (!tar_1) {
                 tar_1 = this;
             } else if (tar_2) {
                 // Si hay dos cartas volteadas, comprueba si son iguales
-                if (tar_1.src === tar_2.src) {
+                const img1 = tar_1.querySelector('img');
+                const img2 = tar_2.querySelector('img');
+
+                if (img1.src === img2.src) {
                     // Si las cartas son iguales, marca ambas cartas como correctas
                     tar_1.classList.add('correct');
                     tar_2.classList.add('correct');
